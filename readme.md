@@ -51,5 +51,20 @@ COUNTERVAILS
 ...
 ```
 
+## Comments
+
+It's interesting to note the following:
+
+The answer would tend to be the histogram with largest number of common buckets (letters) with other words in dictionary with largest sum of buckets (word length).
+	
+For english words - should contain as many vowels as possible and the most common consonants - should match a high number of other english words.
+
+* OVERSPECULATING has all vowels (aeiou)
+* Has some of most most common consonants: R T N S P
+
+FYI most frequent english letters: E A R I O T N S L C U D P
+
+
+
 
 
