@@ -15,11 +15,11 @@ This program takes an approach of searching based on a couple observations.
 
 For example:
 To simplify, lets use only a 5 letter alphabet: ABCDE 
-
+```
                                   ABCDE
 DEAD would have a "histogram" of "10021" - letters used "10011" 
 DAD  would have a "histogram" of "10020" - letters used "10010"
-
+```
 In each position DAD has <= the same letter counts - so it is an
 anagram of a subset of the larger word's letters.
 
