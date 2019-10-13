@@ -11,12 +11,12 @@ in the dictionary. The word(s) that yields the highest score are "super words"
 This program takes an approach of searching based on a couple observations.
 
 * Anagrams have the same histogram of letter counts.
-* An anagram of a subset of letters will contain a subset of the letters.
+* An anagram of a subset of letters will contain a subset of the letters and counts.
 
 For example:
 To simplify, lets use only a 5 letter alphabet: ABCDE 
 ```
-                                  ABCDE
+                                  ABCDE                  ABCDE
 DEAD would have a "histogram" of "10021" - letters used "10011" 
 DAD  would have a "histogram" of "10020" - letters used "10010"
 ```
@@ -28,9 +28,9 @@ DAD, would have  (DEAD.letters & DAD.letters) == DAD.letters only
 if DAD has no letters *not* in DEAD.
 
 This, and a few other tricks, allows a more efficient search of the
-potential space compareds to a pure brute force.
+potential space compared to a pure brute force search
 
-Brute force usn the large dictionary in this project can take up to
+Brute force using the large dictionary in this project can take up to
 4 hours. The more efficient search takes about 2 minutes on 
 a 2.7GHZ I7 Laptop.
 
