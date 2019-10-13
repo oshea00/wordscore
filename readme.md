@@ -34,4 +34,22 @@ Brute force using the large dictionary in this project can take up to
 4 hours. The more efficient search takes about 2 minutes on 
 a 2.7GHZ I7 Laptop.
 
+## Full Run Results
+
+Using the `words.txt` in the `wordscore` project folder the results are...
+(see actual words `subwords.txt` in same folder)
+
+```
+Max Score 7924
+Super Words: OVERSPECULATING
+
+INOPERCULATES
+INOPERCULATE
+REINOCULATES
+COUNTERPLEAS
+COUNTERVAILS
+...
+```
+
+
 
