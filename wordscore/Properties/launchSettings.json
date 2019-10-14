@@ -2,7 +2,7 @@
   "profiles": {
     "wordscore": {
       "commandName": "Project",
-      "commandLineArgs": "c:\\users\\mike\\repos\\wordscore\\wordscore\\words.txt"
+      "commandLineArgs": "..\\..\\..\\words.txt"
     }
   }
 }

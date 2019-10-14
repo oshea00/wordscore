@@ -7,13 +7,12 @@ namespace Tests
 {
     public class Tests
     {
-
         [Test]
         public void CanHashWordToHistogram()
         {
-            var key = Histogram.HistKey("BALLY");
-            Assert.AreEqual("11000000000200000000000010", key.histStr);
-            Assert.AreEqual("01000000000000100000000011", Convert.ToString(key.letters,2).PadLeft(26,'0'));
+            var (histStr, letters) = Histogram.HistKey("BALLY");
+            Assert.AreEqual("11000000000200000000000010", histStr);
+            Assert.AreEqual("01000000000000100000000011", Convert.ToString(letters,2).PadLeft(26,'0'));
         }
 
         [TestCase("","",ExpectedResult = true)]

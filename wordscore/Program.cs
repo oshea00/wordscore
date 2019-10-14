@@ -12,7 +12,7 @@ namespace wordscore
         {
             if (args.Length < 1)
             {
-                Console.WriteLine(@"Usage: [wordcount | dotnet run] pathToDictionary\file.txt");
+                Console.WriteLine(@"Usage: [wordcount | dotnet run] pathToDictionary\words.txt");
                 return;
             }
 

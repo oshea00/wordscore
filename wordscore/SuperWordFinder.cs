@@ -13,27 +13,21 @@ namespace wordscore
         
         HashSet<string> maxSubs = new HashSet<string>();
 
-        Dictionary<string, (string histStr, int letters)> dict;
         Dictionary<string, Histogram> histogramWords;
         Dictionary<int, SortedSet<(string histStr, int letters)>> histogramsByWordLength;
         List<string> maxSuperWords;
 
         public SuperWordFinder(string[] words)
         {
-            dict = new Dictionary<string, (string histStr, int letters)>();
             histogramWords = new Dictionary<string, Histogram>();
             histogramsByWordLength = new Dictionary<int, SortedSet<(string histStr, int letters)>>();
             maxSuperWords = new List<string>();
-            foreach (var w in words)
+
+            foreach (var word in words)
             {
-                var key = Histogram.HistKey(w);
-                dict.Add(w, key);
-            }
-            foreach (var word in dict.Keys)
-            {
-                var histStr = dict[word].histStr;
+                var (histStr, letters) = Histogram.HistKey(word);
                 if (!histogramWords.ContainsKey(histStr))
-                    histogramWords.Add(histStr, new Histogram(dict[word]));
+                    histogramWords.Add(histStr, new Histogram((histStr, letters)));
                 histogramWords[histStr].Words.Add(word);
             }
 
@@ -83,18 +77,15 @@ namespace wordscore
                     }
                 }
 
-                if (iterMax < maxScore)
-                {
-                    i = minLength;
-                    break;
-                }
-                else
+                if (iterMax >= maxScore)
                 {
                     maxScore = iterMax;
                     maxSubs = subs;
                     maxSuperWords.Clear();
                     maxSuperWords.AddRange(superWords);
                 }
+                else
+                    break;
             }
             return maxSuperWords;
         }
@@ -114,7 +105,5 @@ namespace wordscore
                 }
             }
         }
-
-
     }
 }
