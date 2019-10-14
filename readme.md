@@ -60,7 +60,7 @@ The answer would tend to be the histogram with largest number of common buckets 
 For english words - should contain as many vowels as possible and the most common consonants - should match a high number of other english words.
 
 * OVERSPECULATING has all vowels (aeiou)
-* Has some of most most common consonants: R T N S P
+* Has some of most common consonants: R T N S P
 
 FYI most frequent english letters: E A R I O T N S L C U D P
 
