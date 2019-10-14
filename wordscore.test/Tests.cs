@@ -28,16 +28,9 @@ namespace Tests
         [Test]
         public void CanFindSuperWordForSimpleDictionary()
         {
-            var dict = new Dictionary<string, (string histStr, int letters)>();
             var words = new string[] {
                 "ALLLL","BALLY","ALLY","BALL","ALL","BAY","AL","LA"
             };
-
-            foreach (var w in words)
-            {
-                var key = Histogram.HistKey(w);
-                dict.Add(w, key); // assuming no duplicate words
-            }
 
             var finder = new SuperWordFinder(words);
             var superWords = finder.FindSupers();
